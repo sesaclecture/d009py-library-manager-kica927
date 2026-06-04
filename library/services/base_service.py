@@ -1,8 +1,8 @@
-
 from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Iterable
 from library.models.book import Book
+
 
 class BaseService(ABC):
     """서비스 공통 인터페이스.
@@ -10,17 +10,13 @@ class BaseService(ABC):
     """
 
     @abstractmethod
-    def add_book(self, book: Book) -> None:
-        ...
+    def add_book(self, book: Book) -> None: ...
 
     @abstractmethod
-    def remove_book(self, title: str) -> None:
-        ...
+    def remove_book(self, title: str) -> None: ...
 
     @abstractmethod
-    def list_books(self) -> Iterable[Book]:
-        ...
+    def list_books(self) -> Iterable[Book]: ...
 
     @abstractmethod
-    def find_book(self, title: str) -> Book:
-        ...
+    def find_book(self, title: str) -> Book: ...
